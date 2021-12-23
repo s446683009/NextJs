@@ -18,7 +18,7 @@ function Header({ translateFun: t, menu }) {
               return (
                 <ExpendMenu key={t.MenuId} id={t.MenuId} name={t.MenuName} className={styled.headerItem}>
                   <div className={styled.poverWrap}>
-                    {t.subMenus.map(t => <Box key={t.MenuId} sx={{ "&:hover": { backgroundColor: 'primary.hover', color: 'text.primary' } }} className={styled.menuLi} key={t.MenuId}>{t.MenuName}</Box>)}
+                    {t.subMenus.map(t => <Box key={t.MenuId} sx={{ "&:hover": { backgroundColor: 'primary.hover', color: 'text.primary' } }} className={styled.menuLi}>{t.MenuName}</Box>)}
                   </div>
                 </ExpendMenu>
               )
