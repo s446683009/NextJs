@@ -1,0 +1,14 @@
+.header{
+    box-shadow: 2px -2px 16px 0px #ccc;
+    display: flex;
+    padding: 10px 15px;
+    justify-content: space-between;
+}
+
+.headerWrap{
+    display: flex;
+    align-items: center;
+}
+.headerWrap div{
+    padding: 0 8px;
+ }

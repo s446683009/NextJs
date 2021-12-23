@@ -1,33 +1,33 @@
-import React,{useState,useEffect} from 'react'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import {useTitle} from '../../utils/hooks'
-import Image from 'next/image'
 import { useTranslation } from 'next-i18next';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-const myLoader = ({ src, width, quality }) => {
-    return `http://120.55.117.95:3780/${src}?w=${width}&q=${quality || 75}`
-  }
+import Header from '../../components/Header/index'
+import {getMenu} from '../api/hello'
 export default function Index(props) {
-    console.log(props)
-    //useTitle("login");
 
-    let {t}=useTranslation('login');
-
+    useTitle("鲁泰");
+    let {t,i18n}=useTranslation('common');
+    
     return (
-        <div>
-            <h1>{t("welcome")}</h1>
-            {/* <Image width='600' height='400' src="/images/login/bac.png"></Image>
-            <Image width='600' height='400' src="/images/login/bac.png"></Image>
-            <Image width='600' height='400' src="/images/login/bac.png"></Image>
-            <Image width='600' height='400' src="/images/login/bac.png"></Image>
-            <Image width='600' height='400' src="/images/login/bac.png"></Image>
-            <Image  loader={myLoader} src={'/image/carousel/ad2_xs.jpg'} width='500' height='400'></Image> */}
-            
-        </div>
+      <div>
+        <Header translateFun={t} menu={props.menu}></Header>
+        
+      </div>
+      
+       
     )
 }
-export const getStaticProps = async ({ locale }) => ({
+export const getStaticProps = async ({ locale }) => {
+  const langs=await serverSideTranslations(locale, ['login','common']);
+  const data=await getMenu();
+  console.log(data)
+  return(
+  {
+
     props: {
-      ...await serverSideTranslations(locale, ['login']),
+      ...langs,
+      menu:data.data
     },
   })
+}
   
