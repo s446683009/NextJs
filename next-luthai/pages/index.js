@@ -7,7 +7,6 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 const Homepage = (props) => {
 
-  console.log(props)
   const { t } = useTranslation('common')
 
   return (

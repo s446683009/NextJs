@@ -12,3 +12,9 @@
 .headerWrap div{
     padding: 0 8px;
  }
+
+ .loginBac{
+     height: calc(100vh - 75px);
+     background-image: url('../../public/images/login/register.jpg');
+     background-size: cover;
+ }

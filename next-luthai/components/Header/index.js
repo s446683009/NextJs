@@ -8,9 +8,9 @@ import { getMenu } from '../../pages/api/hello'
 
 function Header({ translateFun: t, menu }) {
 
-
+ 
   return (
-    <div className={styled.header}>
+    <Box backgroundColor="background.default" color="text.primary" className={styled.header}>
       <div className={styled.headerWrap}>
         {
           (menu.Left || []).map(t => {
@@ -36,23 +36,29 @@ function Header({ translateFun: t, menu }) {
 
       </div>
       <div className={styled.headerWrap}>
-        <div>
-          <Skeleton variant="circular" width={36} height={36}></Skeleton>
-        </div>
-        <div>
-          <Skeleton variant="circular" width={36} height={36}></Skeleton>
-        </div>
-        <div>
-          <Skeleton variant="circular" width={36} height={36}></Skeleton>
-        </div>
-        <div>
-          <Skeleton variant="circular" width={36} height={36}></Skeleton>
-        </div>
-        <div>
-          <Skeleton variant='rectangular' width={80} height={36}></Skeleton>
-        </div>
+       {
+             (menu.Right || []).map(t => {
+              if (t.HasChildren) {
+                return (
+                  <ExpendMenu key={t.MenuId} id={t.MenuId} type={t.ShowTypeStr} name={t.MenuName} className={styled.headerItem}>
+                    <div className={styled.poverWrap}>
+                      {t.subMenus.map(t => <Box key={t.MenuId} sx={{ "&:hover": { backgroundColor: 'primary.hover', color: 'text.primary' } }} className={styled.menuLi}>{t.MenuName}</Box>)}
+                    </div>
+                  </ExpendMenu>
+                )
+              } else {
+                return (
+                  <Box key={t.MenuId}  sx={{ color: 'text.primary' }} className={styled.headerItem}>{
+                    t.ShowTypeStr=='Icon'?<i className={`iconfont ${styled.headerIcon} ${t.MenuName}`} ></i>:t.MenuName
+                    }</Box>
+  
+                )
+              }
+  
+            })
+       }
       </div>
-    </div>
+    </Box>
   )
 }
 

@@ -3,6 +3,8 @@ import {useTitle} from '../../utils/hooks'
 import { useTranslation } from 'next-i18next';
 import Header from '../../components/Header/index'
 import {getMenu} from '../api/hello'
+import {Box} from '@mui/material'
+import styled from './login.module.css'
 export default function Index(props) {
 
     useTitle("鲁泰");
@@ -11,16 +13,20 @@ export default function Index(props) {
     return (
       <div>
         <Header translateFun={t} menu={props.menu}></Header>
-        
+        <Box className={styled.loginBac}>
+           <Box className={}>
+
+           </Box>
+        </Box>
       </div>
       
        
     )
 }
 export const getStaticProps = async ({ locale }) => {
+  
   const langs=await serverSideTranslations(locale, ['login','common']);
-  const data=await getMenu();
-  console.log(data)
+  const data=await getMenu(locale);
   return(
   {
 

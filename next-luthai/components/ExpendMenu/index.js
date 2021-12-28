@@ -1,9 +1,8 @@
 import * as React from 'react';
-import {Button,Typography,Popover} from '@mui/material';
-import { useTheme } from '@mui/material/styles';
+import {Button,Typography,Popover,Box} from '@mui/material';
 import styled from './index.module.css'
 import PropTypes from 'prop-types'
- function BasicMenu({id,name,children,className}) {
+ function BasicMenu({id,name,children,className,type}) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleOpen = (event) => {
@@ -11,13 +10,12 @@ import PropTypes from 'prop-types'
     setAnchorEl(event.currentTarget);
   };
   const handleClose = () => {
-    console.log(1)
     setAnchorEl(null);
   };
 
 
   return (
-    <div className={styled.expendArea}>
+    <div  className={styled.expendArea}>
     <Typography
       aria-owns={open ?id : undefined}
       aria-haspopup="true"
@@ -25,12 +23,12 @@ import PropTypes from 'prop-types'
     
       className={className}
     >
-     {name}
+     {type=="Icon"?<i className={`iconfont ${styled.headerIcon} ${name}`} ></i>:name}
      <i className='iconfont icon-webicon215'></i>
     </Typography>
-    <div className={styled.expendAbs}>
+    <Box backgroundColor="background.default" className={styled.expendAbs}>
       {children}
-     </div> 
+     </Box> 
     {/* <Popover
       id={id}
       container={anchorEl?.parentElement}
@@ -67,7 +65,8 @@ BasicMenu.propTypes={
     // menulist:PropTypes.array,
     // menuItemClick:PropTypes.func,
     // menuItemClassName:PropTypes.string,
-    className:PropTypes.string
+    className:PropTypes.string,
+    type:PropTypes.string
 }
 
 export default BasicMenu;

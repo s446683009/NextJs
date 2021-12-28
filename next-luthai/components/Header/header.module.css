@@ -1,9 +1,9 @@
 .header{
     box-shadow: 2px -2px 16px 0px #ccc;
     display: flex;
-    padding: 15px;
     justify-content: space-between;
     font-size: 1rem;
+    padding: 15px;
 }
 
 .headerWrap{
@@ -12,15 +12,20 @@
     padding: 0 15px;
 }
 .headerWrap>div{
-    padding: 5px;
+    padding: 6px;
     cursor: pointer;
  }
 
- .headerWrap .headerItem{
-    padding: 5px;
+ .headerWrap .headerItem {
+    /* padding: 5px; */
+
+ }
+
+ .headerIcon{
+    font-size: 1.4rem;
  }
 .poverWrap{
-    padding: 5px;
+    padding: 6px;
     
 }
 .menuLi{

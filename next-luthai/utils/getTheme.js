@@ -63,11 +63,11 @@ const themeObj={[THEME_TEMPLATE_KEY.INDIGO]: {
         },
         secondary: pink,
         background:{
-          default:blue[500],
+          default:'#fff',
           side:'#fff'
         },
         text:{
-          primary:'#212b36',//文本颜色
+          primary:'#212b36',//文本颜色'#212b36'
           logo:'#fff'
         },
         icon:{
