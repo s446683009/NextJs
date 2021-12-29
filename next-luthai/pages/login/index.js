@@ -14,7 +14,7 @@ export default function Index(props) {
       <div>
         <Header translateFun={t} menu={props.menu}></Header>
         <Box className={styled.loginBac}>
-           <Box className={}>
+           <Box >
 
            </Box>
         </Box>
