@@ -14,8 +14,9 @@
     text-align: left;
     
 }
-.expendAbs:last-child{
-    left: -35px;
+.expendAbs:last-child,.expendAbs:nth-last-child(2){
+    right: 0;
+    left: auto;
 }
 .expendArea{
     position: relative;
