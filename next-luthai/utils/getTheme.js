@@ -54,7 +54,7 @@ import { createTheme } from '@mui/material/styles';
 const themeObj={[THEME_TEMPLATE_KEY.INDIGO]: {
     name: '沉靛蓝',
     theme: {
-   
+    
       palette: {
         primary: {
           main: '#333',//按钮等颜色
@@ -78,6 +78,13 @@ const themeObj={[THEME_TEMPLATE_KEY.INDIGO]: {
         }
       },
       components:{
+        MuiCheckbox:{
+          styleOverrides:{
+            root:{
+              color:'#212b36'
+            }
+          }
+        },
         MuiTypography: {
           styleOverrides: {
             // Name of the slot
@@ -87,6 +94,27 @@ const themeObj={[THEME_TEMPLATE_KEY.INDIGO]: {
             },
           },
         },
+        MuiTextField:{
+          styleOverrides:{
+            root:{
+              borderColor:'#212b36'
+            }
+          }
+
+
+        },
+        MuiOutlinedInput:{
+          styleOverrides:{
+           
+            notchedOutline:{
+              
+              //borderColor:'#212b36'
+              
+            }
+          }
+
+        }
+
       }
     }
   },

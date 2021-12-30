@@ -17,4 +17,30 @@
      height: calc(100vh - 75px);
      background-image: url('../../public/images/login/register.jpg');
      background-size: cover;
+     display: flex;
+     justify-content: center;
+     align-items: center;
  }
+ .loginFormWrap{
+    box-shadow:  0 .5rem 1rem rgba(0,0,0,.15);
+    background-color:rgb(255,255,255,0.7);
+    padding: 50px;
+    width: 480px;
+ }
+ .loginTitle{
+     font-size: 25px;
+     text-align: center;
+ }
+ .loginItem{
+     padding: 15px;
+    
+     
+ }
+ .loginSmallItem{
+    padding: 6px 15px;
+ 
+ }
+ .loginItem input{
+    font-size: 15px;
+ }
+
