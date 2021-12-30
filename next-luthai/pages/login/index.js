@@ -56,7 +56,7 @@ export default function Index(props) {
                 variant="contained"
                 sx={{mt:2, pt: 1.5, pb: 1.5 }}
               >
-                Sign In
+               {t("login_button")}
               </Button>
             </div> 
             <div className={styled.loginSmallItem}>
