@@ -4,4 +4,6 @@ module.exports = {
     locales: ['zh','en', 'de'],
 
   },
+
+  
 }

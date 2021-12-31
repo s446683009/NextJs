@@ -8,6 +8,7 @@
 .headerWrap{
     display: flex;
     align-items: center;
+    
 }
 .headerWrap div{
     padding: 0 8px;
@@ -25,22 +26,44 @@
     box-shadow:  0 .5rem 1rem rgba(0,0,0,.15);
     background-color:rgb(255,255,255,0.7);
     padding: 50px;
-    width: 480px;
+    width: 450px;
+    border-radius: 4px;
  }
  .loginTitle{
      font-size: 25px;
      text-align: center;
  }
  .loginItem{
-     padding: 15px;
     
      
  }
  .loginSmallItem{
-    padding: 6px 15px;
+    padding: 3px 15px;
  
  }
  .loginItem input{
-    font-size: 15px;
+    font-size: 16px;
+ }
+ .loginSmallItem input{
+     font-size: 12px;;
  }
 
+
+ @media (max-width: 750px){
+
+    .loginFormWrap{
+        width: 80%;
+        padding: 15px;
+    }
+  
+ }
+ 
+ .footWrap{
+     width: 100%;
+     position: fixed;
+     bottom: 0;
+     font-size: 0.875rem;
+     text-align: center;
+     
+     padding: 15px;
+ }

@@ -1,6 +1,6 @@
 
 import {pink,indigo,red,green,grey,blue,orange,purple,cyan} from '@mui/material/colors'
-import { createTheme } from '@mui/material/styles';
+import { createTheme,responsiveFontSizes } from '@mui/material/styles';
 // export default createMuiTheme({
 //     palette:{
 //         type:'light',
@@ -105,11 +105,22 @@ const themeObj={[THEME_TEMPLATE_KEY.INDIGO]: {
         },
         MuiOutlinedInput:{
           styleOverrides:{
-           
+            input:{
+              padding:'14px',
+              fontFamily: '"OPPOSans","Microsoft YaHei","sans-serif"',
+            },
             notchedOutline:{
               
               //borderColor:'#212b36'
               
+            }
+          }
+
+        },
+        MuiFormHelperText:{
+          styleOverrides:{
+            root:{
+             
             }
           }
 
@@ -253,10 +264,10 @@ const themeObj={[THEME_TEMPLATE_KEY.INDIGO]: {
 
 function getTheme(themeId){
   if(themeObj[themeId])
-    return createTheme(themeObj[themeId].theme);
+    return (createTheme(themeObj[themeId].theme));
   else
-    return createTheme(themeObj[THEME_TEMPLATE_KEY.INDIGO].theme);
+    return (createTheme(themeObj[THEME_TEMPLATE_KEY.INDIGO].theme));
 }
 
-export default getTheme;
+export default (getTheme);
 export {themeObj};

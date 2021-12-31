@@ -15,9 +15,11 @@ module.exports = {
             unitPrecision: 5,
             mediaQuery: false,
             minPixelValue: 0,
+          
             propList: [
-              '*background*',
               '*padding*',
+              'padding',
+              '*background*',
                 '*height',
               '*margin*',
               'letter-spacing',
