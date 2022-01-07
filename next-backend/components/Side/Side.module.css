@@ -1,0 +1,46 @@
+.sideWrap{
+    position: fixed;
+    width: 280px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-right: 1px dashed rgba(145, 158, 171, 0.24);
+
+}
+.sideOperate{
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 20px;
+}
+
+.sideUserWrap{
+   
+  
+   
+    padding:0px 20px;
+
+}
+.userContent{
+    background: rgba(145, 158, 171, 0.12);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    padding: 20px 16px;
+}
+
+
+.sideUserName{
+    font-size: 15px;
+    line-height: 1.6;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.sideIntroduct{
+    color: inherit;
+    font-size: 13px;
+    line-height: 1.6;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

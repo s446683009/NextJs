@@ -57,9 +57,9 @@ const themeObj={[THEME_TEMPLATE_KEY.INDIGO]: {
     
       palette: {
         primary: {
-          main: '#333',//按钮等颜色
+          main: 'rgb(0, 171, 85)',//按钮等颜色
           text:'#fff',// 添加用于按钮文字颜色
-          hover:'#ccc',
+          hover:'rgb(0, 171, 85,0.08)',
         },
         secondary: pink,
         background:{
@@ -67,7 +67,7 @@ const themeObj={[THEME_TEMPLATE_KEY.INDIGO]: {
           side:'#fff'
         },
         text:{
-          primary:'#212b36',//文本颜色'#212b36'
+          primary:'rgb(99, 115, 129)',//文本颜色'#212b36'
           logo:'#fff'
         },
         icon:{
@@ -90,11 +90,24 @@ const themeObj={[THEME_TEMPLATE_KEY.INDIGO]: {
             // Name of the slot
             root: {
               // Some CSS
-              fontFamily: '"OPPOSans","Microsoft YaHei","sans-serif"',
+              fontFamily: '"Microsoft Yahei",verdana',
+              fontSize:'.85rem'
+            },
+          },
+        },
+        MuiListItemIcon:{
+          styleOverrides: {
+            // Name of the slot
+            root: {
+              // Some CSS
+              minWidth:'auto',
+              color:'inherit'
             },
           },
         },
         MuiTextField:{
+         
+      
           styleOverrides:{
             root:{
               borderColor:'#212b36'

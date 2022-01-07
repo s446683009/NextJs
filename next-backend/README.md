@@ -6,9 +6,9 @@
 
 ```bin
 
- docker build . -t next_luthai 
+ docker build . -t next_backend
  
- docker run -d -t --rm -p 81:3000 --name luthai next_luthai
+ docker run -d -t --rm -p 82:3000 --name backend next_backend
 
 ```
 

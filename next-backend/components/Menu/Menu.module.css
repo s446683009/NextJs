@@ -1,0 +1,25 @@
+.menuWrap{
+    padding: 24px 20px;
+}
+
+.menuItem{
+    font-weight: 600;
+    font-size: 15px;
+}
+.subMenuItem{
+    font-weight: 600;
+    font-size: 15px;
+}
+.iconfont{
+    
+}
+.menuItem .iconfont{
+    font-size: 1.1rem;
+}
+
+.subMenuItem .iconfont{
+    font-size: .5rem;
+}
+.selectMenu.subMenuItem .iconfont{
+    font-size: 1.1rem;
+}
