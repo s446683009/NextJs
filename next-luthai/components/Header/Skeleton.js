@@ -1,4 +1,3 @@
-
 import {Skeleton} from '@mui/material'
 import styled from './header.module.css'
 

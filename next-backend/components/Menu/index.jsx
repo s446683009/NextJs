@@ -21,20 +21,21 @@ const mapList=(menu,options,leavel=1)=>{
         const bl=openKey.includes(t.menuId);
         const icon=leavel>1?'icon-dian1':'icon-yonghuming';
         const itemClass=leavel>1?styled.subMenuItem:styled.menuItem;
-        const selectClass=t.menuId==selectMenuId?styled.selectMenu:'';
-        const ssx={...(t.menuId==selectMenuId?slectMenuSX:{}),pl:leavel}
-       
+        const selectFlag=t.menuId==selectMenuId;
+        const selectClass=selectFlag?styled.selectMenu:'';
+        const ssx={...(selectFlag?slectMenuSX:{}),pl:leavel,mb:0.5}
+        const expendClass=bl?styled.expendClass:styled.closeClass;
         return (
             <div key={t.menuId}>
-                <ListItem className={`${itemClass} ${selectClass}`}  sx={ssx} button onClick={onMenuClick.bind(null,t.menuId,t.hasChildren)}>
+                <ListItem  className={`${itemClass} ${selectClass}`}  sx={ssx} button onClick={onMenuClick.bind(null,t.menuId,t.hasChildren)}>
 
                     <ListItemIcon className={styled.menuIcon} sx={{mr:1}}>
-                    <i className={`iconfont ${icon} ${styled.iconfont}`} />
+                    <i className={`iconfont ${icon} ${styled.iconfont} `} />
                     </ListItemIcon>
 
                     <ListItemText primary={t.menuName} />
                     {t.hasChildren?
-                        bl?<i className='iconfont icon-zhankai'  />:<i className='iconfont icon-zhankai'  />
+                        <i className={`iconfont icon-zhankai ${expendClass}`}  />
                     :null}
                 </ListItem>
                 {
@@ -79,7 +80,7 @@ function CustomMenu() {
             }
             setselectMenuId(menuId)
         },
-        []
+        [handleOpen]
     )
 
     return (

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Side from '../../components/Side'
-import {useTitle} from '../../utils/hooks/index'
+import {useTitle} from '../../utils/hooks'
 function index(props) {
     useTitle("MUI");
 

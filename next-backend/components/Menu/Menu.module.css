@@ -5,21 +5,44 @@
 .menuItem{
     font-weight: 600;
     font-size: 15px;
+    border-radius: 8px;
+    line-height: 1.7;
 }
 .subMenuItem{
     font-weight: 600;
     font-size: 15px;
+    border-radius: 8px;
+    line-height: 1.7;
 }
 .iconfont{
     
 }
+.menuIcon{
+    justify-content: center;
+    align-items: center;
+    width: 22px;
+    height: 22px;
+}
 .menuItem .iconfont{
     font-size: 1.1rem;
+}
+.menuIcon .iconfont{
+   transition:transform 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 .subMenuItem .iconfont{
     font-size: .5rem;
 }
 .selectMenu.subMenuItem .iconfont{
-    font-size: 1.1rem;
+   transform: scale(1.8);
+}
+.expendClass{
+    font-size: 12px;
+
+    transition: transform 0.5s;
+}
+.closeClass{
+    font-size: 12px;
+    transform: rotate(-90deg);
+    transition: transform 0.5s;
 }
