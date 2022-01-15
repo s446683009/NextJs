@@ -1,0 +1,18 @@
+
+.headerWrap{
+    display: flex;
+   justify-content: space-between;
+   position: fixed;
+   top:0;
+   right: 0;
+   width: calc(100% - 280px);
+   margin-left:280px;
+   padding: 24px;
+}
+
+.zoomWrap{
+
+   margin-left: calc(40Px+32px);
+}
+
+

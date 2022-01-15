@@ -5,12 +5,12 @@
     top: 0;
     left: 0;
     border-right: 1px dashed rgba(145, 158, 171, 0.24);
-
+    transition:width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 .sideOperate{
     display: flex;
     justify-content: space-between;
-    padding: 24px 20px;
+    padding: 24px 16px;
     align-items: center;
 }
 
@@ -18,7 +18,7 @@
    
   
    
-    padding:0px 20px;
+    padding:0px 16px;
 
 }
 .userContent{
@@ -28,7 +28,10 @@
     align-items: center;
     padding: 20px 16px;
 }
-
+.userInfo{
+    width: 100%;
+  
+}
 
 .sideUserName{
     font-size: 15px;
@@ -44,4 +47,31 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+.simapleSideWrap{
+    width: calc(40Px + 32px);
+    transition:width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    
+}
+ 
+.simapleSideWrap .userContent{
+    background: transparent;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    padding: 20px 0px;
+}
+.simapleSideWrap .userInfo{
+    width: 0;
+    opacity: 0;
+
+}
+.sideExpend{
+    transform: rotate(-90deg);
+    transition: transform 0.5s;
+}
+.sideZoom{
+    transform: rotate(90deg);
+    transition: transform 0.5s;
 }

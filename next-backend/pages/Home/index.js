@@ -1,20 +1,23 @@
-import React from 'react'
+import React,{useState} from 'react'
 import PropTypes from 'prop-types'
 import Side from '../../components/Side'
-import {useTitle} from '../../utils/hooks'
-function index(props) {
+import Main from '../../components/Main'
+import useTitle from '../../utils/hooks/useTitle'
+function Home(props) {
     useTitle("MUI");
-
+    const [model, setModel] = useState("full")
     return (
-       <main>
-           <Side></Side>
-       </main>
+       <div>
+           <Side model={model} setModel={setModel}></Side>
+            <Main>
+
+            </Main>
+       </div>
     )
 }
 
-index.propTypes = {
+Home.propTypes = {
 
 }
 
-export default index
-
+export default Home

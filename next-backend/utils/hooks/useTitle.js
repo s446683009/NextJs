@@ -1,7 +1,6 @@
 import {useEffect} from 'react'
 
-
-export const useTitle=(title)=>{
+const useTitle=(title)=>{
     if(typeof(title)!=="string"){
         throw "title type must be string";
     }
@@ -10,3 +9,5 @@ export const useTitle=(title)=>{
         document.title=title;
     },[title])
 }
+
+export default useTitle;

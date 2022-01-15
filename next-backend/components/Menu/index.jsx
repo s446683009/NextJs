@@ -5,6 +5,7 @@ import styled from './Menu.module.css';
 
 
 import menus from '../../utils/getMenu'
+import { style } from '@mui/system';
 
 const slectMenuSX={
     color:'primary.main',
@@ -14,7 +15,7 @@ const slectMenuSX={
 };
 
 const mapList=(menu,options,leavel=1)=>{
-    const {openKey,selectMenuId,onMenuClick,onMenuExpend}=options;
+    const {openKey,selectMenuId,onMenuClick,simapleMenu}=options;
     
    
     return menu.map(function(t){
@@ -33,7 +34,7 @@ const mapList=(menu,options,leavel=1)=>{
                     <i className={`iconfont ${icon} ${styled.iconfont} `} />
                     </ListItemIcon>
 
-                    <ListItemText primary={t.menuName} />
+                    <ListItemText  className={styled.menuItemText} primary={t.menuName} />
                     {t.hasChildren?
                         <i className={`iconfont icon-zhankai ${expendClass}`}  />
                     :null}
@@ -52,8 +53,7 @@ const mapList=(menu,options,leavel=1)=>{
 
 }
 
-function CustomMenu() {
- 
+function CustomMenu({simapleMenu}) {
     const [selectMenuId, setselectMenuId] = useState('')
     const [expendMenu, setExpendMenu] = useState([])
  
@@ -84,7 +84,7 @@ function CustomMenu() {
     )
 
     return (
-        <Box    className={styled.menuWrap}>
+        <Box    className={(simapleMenu?styled.simpleMenu:styled.menuWrap)}>
             <List
                 component="nav"
                 aria-labelledby="nested-list-subheader"
@@ -95,7 +95,8 @@ function CustomMenu() {
                         selectMenuId:selectMenuId,
                         selectMenuClass:styled.selectMenu,
                         onMenuExpend:handleOpen,
-                        onMenuClick:handClick
+                        onMenuClick:handClick,
+                        simapleMenu
                     })
                 }
             </List>
