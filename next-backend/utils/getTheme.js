@@ -57,7 +57,8 @@ const themeObj={[THEME_TEMPLATE_KEY.INDIGO]: {
     
       palette: {
         primary: {
-          main: 'rgb(0, 171, 85)',//按钮等颜色
+          scr:'rgb(0, 171, 85)',
+          main: '#333',//按钮等颜色
           text:'#fff',// 添加用于按钮文字颜色
           hover:'rgb(0, 171, 85,0.08)',
         },
@@ -101,7 +102,8 @@ const themeObj={[THEME_TEMPLATE_KEY.INDIGO]: {
             root: {
               // Some CSS
               minWidth:'auto',
-              color:'inherit'
+              color:'inherit',
+              
             },
           },
         },
@@ -130,6 +132,15 @@ const themeObj={[THEME_TEMPLATE_KEY.INDIGO]: {
           }
 
         },
+        // MuiIconButton:{
+        //   styleOverrides:{
+        //     root:{
+        //       '&:hover':{
+        //         transform:'scale(1.09)'
+        //       }
+        //     }
+        //   }
+        // },
         MuiFormHelperText:{
           styleOverrides:{
             root:{
