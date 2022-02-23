@@ -36,7 +36,7 @@ function Side({translate:t,model="full",setModel}) {
     
         >
             <div className={styled.sideOperate}>
-                <Box sx={{fontSize:'2rem',color:'primary.main',p:1}}>
+                <Box sx={{fontSize:'2rem',color:'primary.scr',p:1}}>
                      <i className='iconfont icon-comment'></i>
                 </Box>
                 {

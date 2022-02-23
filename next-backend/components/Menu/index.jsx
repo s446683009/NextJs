@@ -8,7 +8,7 @@ import menus from '../../utils/getMenu'
 import { style } from '@mui/system';
 
 const slectMenuSX={
-    color:'primary.main',
+    color:'primary.scr',
     backgroundColor:'primary.hover',
   
 

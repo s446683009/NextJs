@@ -1,17 +1,28 @@
 @font-face {
   font-family: "iconfont"; /* Project id 965491 */
-  src: url('iconfont.woff2?t=1641304338878') format('woff2'),
-       url('iconfont.woff?t=1641304338878') format('woff'),
-       url('iconfont.ttf?t=1641304338878') format('truetype');
+  src: url('iconfont.woff2?t=1644889443581') format('woff2'),
+       url('iconfont.woff?t=1644889443581') format('woff'),
+       url('iconfont.ttf?t=1644889443581') format('truetype');
 }
 
 .iconfont {
   font-family: "iconfont" !important;
-  font-size: inherit;
+  /* font-size: 16px; */
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  line-height: 1;
+}
+
+.icon-tongzhi1:before {
+  content: "\e61e";
+}
+
+.icon-qunzu:before {
+  content: "\e668";
+}
+
+.icon-sousuo:before {
+  content: "\e86e";
 }
 
 .icon-shousuojiantou:before {
