@@ -8,11 +8,16 @@
    width: calc(100% - 280px);
    margin-left:280px;
    padding: 24px;
+
 }
 
 .zoomWrap{
 
    margin-left: calc(40Px+32px);
+}
+.Box{
+   display: flex;
+   justify-content: flex-end;
 }
 
 

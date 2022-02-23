@@ -16,7 +16,7 @@ function LanguageMenu({lng='zh'}) {
   }
  const iconComponent= <Image  src={langObj?.icon} width={25} height={25} alt='language'/>;
   return (
-    <ExpendMenu text={iconComponent} closeRef={parentRef}>
+    <ExpendMenu id="languge" text={iconComponent} closeRef={parentRef}>
         <MenuList>
           {
             languages.map(t=>(
