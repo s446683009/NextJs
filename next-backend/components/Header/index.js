@@ -6,9 +6,11 @@ import LanguageMenu from '../Pro/LanguageMenu'
 import NotificationMenu from '../Pro/NotificationMenu'
 import GroupMenu from '../Pro/GroupMenu'
 import UserMenu from '../Pro/UserMenu'
-function Header({t}) {
+function Header({t,model}) {
+
+    const headerWrap=model=="simple"?`${styled.headerWrap} ${styled.simpleWrap}`:styled.headerWrap;
     return (
-        <Box className={styled.headerWrap}>
+        <Box className={headerWrap}>
               <IconButton  sx={{ fontSize: '1rem' }} size="large">
                         <i className='iconfont icon-sousuo'></i>
                </IconButton>

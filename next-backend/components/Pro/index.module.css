@@ -2,11 +2,38 @@
     width: 40px;
     height: 40px;
 }
+.notificationWrap{
+    width: 280px;
+
+}
 .titleWrap{
-    min-width: 250px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
-    padding-right: 6px;
+    padding: 10px 6px 10px 10px;
+
+}
+.title{
+    font-size: 17px;
+}
+.subTitle{
+    color: #bdbdbd;
+    font-size: 13px;
+}
+
+.between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.primaryTxt{
+    font-size: 14px;
+}
+.subTxt{
+    font-size: 12px;
+    color:rgba(0, 0, 0, 0.6);
+}
+.secondText{
+    font-size: 13px;
 }

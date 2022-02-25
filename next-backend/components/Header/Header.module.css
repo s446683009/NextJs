@@ -8,7 +8,11 @@
    width: calc(100% - 280px);
    margin-left:280px;
    padding: 24px;
+   z-index: 1;
 
+}
+.simpleWrap{
+   width: calc(100% - 72px);
 }
 
 .zoomWrap{

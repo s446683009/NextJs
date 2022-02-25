@@ -11,7 +11,12 @@
     "login_remberPsw":"记住密码",
     "login_button":"登录",
     "footer_web":"Copyright © SoloTravelling 2021.",
-    "footer_email":"如果您有任何问题请联系我们"
+    "footer_email":"如果您有任何问题请联系我们",
+    "notification":"消息通知",
+    "notification_notRead":"您有{{count}}条消息未读",
+    "notification_new":"新消息",
+    "notification_recent":"最近消息",
+    "contacts":"联系人"
 
 
 

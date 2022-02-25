@@ -11,23 +11,17 @@ const iconComponent= <i className='iconfont icon-qunzu'></i>;
   return (
     
     <ExpendMenu id="group" text={iconComponent} closeRef={parentRef}>
-      <>
+      <div className={styled.notificationWrap}>
       <div className={styled.titleWrap}>
-        <div>
-         <Typography>{t("Notification")}</Typography>
-         <Typography>您有两个未读消息</Typography>
-        </div>
-        <div>
-          <IconButton>
-              <i className='iconfont icon-tongzhi1'></i>
-          </IconButton>  
-        </div>
+        <Typography className={styled.title} variant='h2' sx={{py:1}}>{t("contacts")}（20）</Typography>
       </div>
     
-     <List>
-
+     <List sx={{maxHeight:500,minHeight:200}}>
+          {
+           
+          }
      </List>
-     </>
+     </div>
   </ExpendMenu>
   )
 }

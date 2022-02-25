@@ -10,11 +10,10 @@ function Home(props) {
     const { t, i18n } = useTranslation('common');
     const [model, setModel] = useState("full")
 
-
     return (
        <div>
            <Side model={model} setModel={setModel}></Side>
-            <Main t={t}>
+            <Main  model={model}  t={t}>
 
             </Main>
        </div>

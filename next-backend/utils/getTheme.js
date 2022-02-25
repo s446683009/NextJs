@@ -63,6 +63,7 @@ const themeObj={[THEME_TEMPLATE_KEY.INDIGO]: {
           hover:'rgb(0, 171, 85,0.08)',
         },
         secondary: pink,
+        
         background:{
           default:'#fff',
           side:'#fff'
@@ -105,6 +106,20 @@ const themeObj={[THEME_TEMPLATE_KEY.INDIGO]: {
               color:'inherit',
               
             },
+          },
+        },
+        MuiListItem:{
+          styleOverrides: {
+            // Name of the slot
+            root: {
+              "&:hover":{
+                background:'rgba(0, 0, 0, 0.04)',
+                
+              },
+            },
+           
+            
+           
           },
         },
         MuiTextField:{
