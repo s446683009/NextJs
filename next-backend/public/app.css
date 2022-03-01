@@ -22,5 +22,16 @@ body{
   flex-direction: column;
   min-height: 100vh;
   min-width: 100vw;
+  cursor: pointer;
 }
 
+.cursorPoint{
+
+  cursor: pointer;
+}
+.textClip{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+}
