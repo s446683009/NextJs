@@ -4,7 +4,7 @@
 }
 .notificationWrap{
     width: 280px;
-
+    border-radius: 8px;
 }
 .useWrap{
     min-width: 200px;
@@ -13,22 +13,31 @@
 
 }
 .useWrap .titleWrap .title{
-    font-size: 15px;
+    font-size: 16px;
 }
 .titleWrap{
 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 6px 10px 10px;
-
+    padding: 6px;
+    padding-left: 12px;
+   
+}
+.ListWrap{
+    min-height: 200px;
+    max-height: 500px;
+    overflow-y: hidden;
+}
+.ListWrap:hover{
+    overflow-y: auto;
 }
 .title{
     font-size: 17px;
 }
 .subTitle{
     color: #bdbdbd;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .between{

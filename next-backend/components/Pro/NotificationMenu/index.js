@@ -20,17 +20,17 @@ function NotificationMenu({ t }) {
       <div className={styled.notificationWrap}>
         <Box className={styled.titleWrap}>
           <div>
-            <Typography className={styled.title} sx={{ py: 0.8 }}>{t("notification")}</Typography>
+            <Typography className={styled.title} sx={{ py: 0.5 }}>{t("notification")}</Typography>
             <Typography className={styled.subTitle}>{t("notification_notRead", { count: 2 })}</Typography>
           </div>
-          <div>
+          {/* <div>
             <IconButton>
               <Badge badgeContent={2} color="secondary">
                 <i className='iconfont icon-tongzhi1'></i>
               </Badge>
 
             </IconButton>
-          </div>
+          </div> */}
         </Box>
 
         <List

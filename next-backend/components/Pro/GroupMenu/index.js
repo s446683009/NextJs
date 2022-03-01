@@ -16,7 +16,7 @@ const iconComponent= <i className='iconfont icon-qunzu'></i>;
         <Typography className={styled.title} variant='h2' sx={{py:0.8,pl:1}}>{t("contacts")}（20）</Typography>
       </div>
     
-     <List sx={{maxHeight:500,minHeight:200,overflowY:'auto'}}>
+     <List className={styled.ListWrap}>
           {
             Array.from("12345678").map(t=>(
                 <ListItem key={t} button>
