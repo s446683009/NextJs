@@ -25,7 +25,7 @@ const textSx={
       </div>
      
       <List>
-          <Divider light  sx={{my:0.8}} />
+          <Divider light  sx={{my:1}} />
         <ListItem className={styled.userItem} button>
           <ListItemText sx={textSx} primary={"我的主页"}></ListItemText>
         </ListItem>
@@ -35,7 +35,7 @@ const textSx={
         <ListItem className={styled.userItem} button> 
           <ListItemText sx={textSx} primary={"设置"}></ListItemText>
         </ListItem>
-        <Divider light  sx={{my:0.8}} />
+        <Divider light  sx={{my:1}} />
         <ListItem className={styled.userItem} button>
           <ListItemText sx={textSx} primary={"登出"}></ListItemText>
         </ListItem>
