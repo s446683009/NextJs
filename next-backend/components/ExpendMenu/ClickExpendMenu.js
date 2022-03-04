@@ -9,7 +9,7 @@ function ClickExpendMenu({children,sx={},className,text,type='text',closeRef,id}
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleClick = (event) => {
-    console.log(event.currentTarget)
+
     setAnchorEl(event.target);
   };
 
