@@ -7,6 +7,7 @@ import Image from 'next/image'
 import styled from '../index.module.css'
 
 function NotificationMenu({ t }) {
+  
   const parentRef = React.useRef(null);
   const iconComponent = (
     <Badge badgeContent={2} color="secondary">

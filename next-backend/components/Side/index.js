@@ -1,17 +1,22 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {Box,List,IconButton,Avatar} from '@mui/material'
+import {Box,List,IconButton,Avatar,Drawer,useMediaQuery,useTheme} from '@mui/material'
 import {useState} from 'react'
 
 import styled from './Side.module.css'
 import Menu from '../Menu/index'
+import { style } from '@mui/system'
 
 
 function Side({translate:t,model="full",setModel}) {
+   const theme = useTheme();
+   const matches = useMediaQuery(theme.breakpoints.down('sm'));
    const isSimple=model=='simple';
    const [simple, setSimple] = useState(isSimple);
- 
+
+   const variant=matches?'temporary':'permanent';//
    const sideIconClass=isSimple?styled.sideExpend:styled.sideZoom;
+   const mobileOpen=matches?!simple:true;
 
    const handSimpleHover=(flag)=>{
        if(isSimple){
@@ -23,18 +28,23 @@ function Side({translate:t,model="full",setModel}) {
         setModel(model);
         setSimple(model=='simple');
    }
-
+   //temporary
 
     return (
-        <Box className={`${styled.sideWrap} ${simple?styled.simapleSideWrap:''}`} 
-        
+
+      <Drawer
+        variant={variant}
+        className={isSimple?styled.simpleDrawer:styled.sideDrawer}
+        PaperProps={{className:`${styled.sideWrap} ${!matches&&simple?styled.simapleSideWrap:''}`}}
+        open={mobileOpen}
         onMouseEnter={()=>{handSimpleHover(false)}}
         onMouseLeave={()=>{handSimpleHover(true)}}
         sx={{
             color:'text.primay'
         }} 
-    
-        >
+      >
+       
+   
             <div className={styled.sideOperate}>
                 <Box sx={{fontSize:'2rem',color:'primary.scr',p:1}}>
                      <i className='iconfont icon-comment'></i>
@@ -53,7 +63,7 @@ function Side({translate:t,model="full",setModel}) {
                     <Avatar src='https://avatars.githubusercontent.com/u/37138998?s=40&v=4'>
 
                     </Avatar>
-                    <Box className={styled.userInfo} sx={{ ml: 2, color: 'text.primary' }}>
+                    <Box className={styled.userInfo} sx={{ ml: 2, color:'text.primary'}}>
                         <p className={styled.sideUserName} >SoloTravelling</p>
                         <p className={styled.sideIntroduct}>s446683009</p>
                     </Box>
@@ -66,7 +76,7 @@ function Side({translate:t,model="full",setModel}) {
                 <Menu simapleMenu={simple}></Menu>
             </div> 
          
-        </Box>
+        </Drawer>
     )
 }
 

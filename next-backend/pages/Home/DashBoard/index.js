@@ -1,17 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
-function index(props) {
+import Home from '../index'
+function DashBoard(props) {
     return (
-        <div>
-            你好
-        </div>
+       <div>
+           你好
+       </div>
+           
+     
     )
 }
 
-index.propTypes = {
+DashBoard.propTypes = {
 
 }
 
-export default index
+export default DashBoard
 

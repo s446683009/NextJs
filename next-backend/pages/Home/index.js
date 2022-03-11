@@ -1,22 +1,33 @@
 import React,{useState} from 'react'
+import {Box} from '@mui/material'
 import PropTypes from 'prop-types'
 import Side from '../../components/Side'
 import Main from '../../components/Main'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import useTitle  from '../../utils/hooks/useTitle'
 import { useTranslation } from 'next-i18next';
-function Home(props) {
+import Header from '../../components/Header'
+
+function Home({children}) {
     useTitle("MUI");
     const { t, i18n } = useTranslation('common');
     const [model, setModel] = useState("full")
-
+    
     return (
-       <div>
-           <Side model={model} setModel={setModel}></Side>
-            <Main  model={model}  t={t}>
+      <>
 
-            </Main>
-       </div>
+        <Header model={model} t={t} setModel={setModel}></Header>
+        <Box className='wrap'>
+    
+          <Side model={model} setModel={setModel}></Side>
+        
+          <main className='main'>
+            HHHHHHHH
+          </main>
+        </Box>
+
+      </>
+       
     )
 }
 
