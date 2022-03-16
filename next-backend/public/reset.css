@@ -22,7 +22,7 @@ html {
     html {
       /* 600px-1000px每100像素宽字体增加1px(20px-24px) */
       font-size: calc(125% + 4 * (100vw - 600px) / 400);
-      font-size: calc(20px + 4 * (100vw - 600px) / 400);
+      font-size: calc(16px + 4 * (100vw - 600px) / 400);
     }
   }
   

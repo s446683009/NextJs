@@ -15,37 +15,55 @@ body{
 }
 #__next {
   margin: 0;
-  font-family: 'Microsoft Yahei',verdana; 
+  font-family: 'Microsoft YaHei';
 
   color:#212b36 ;
   display: flex;
   flex-direction: column;
-
+  height: 100vh;
+  width: 100vw;
   cursor: pointer;
 }
 .main{
-  width: 100%;
-  padding: 0 15px;
+
+  padding: 0 24px;
   padding-top:70px;
   flex: 1;
-  height: 100%;
+  overflow-x: hidden;
 }
 .wrap{
   display: flex;
   justify-content: space-between;
-  min-height: 100vh;
-  min-width: 100vw;
-
+  height: 100vh;
+  width: 100vw;
 }
 
 .cursorPoint{
-
   cursor: pointer;
 }
 .textClip{
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+
+}
+.slick-dots li{
+  width: 15px;
+  height: 15px;
+  margin: 0 3px;
+
+}
+
+.slick-dots li.slick-active button:before {
+  color: #fff;
+}
+.slick-dots li button:before{
+  font-size: 3px;
+  width: 12px;
+  height: 12px;
+}
+.slick-list,.slick-list div{
+  height: 100%;
 
 }
 *::-webkit-scrollbar {

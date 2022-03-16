@@ -7,8 +7,9 @@
    right: 0;
    width: calc(100% - 280px);
    margin-left:280px;
-   padding: 24px;
+   padding: 15px;
    z-index: 1;
+   background: #fff;
 
 }
 .simpleWrap{
@@ -22,9 +23,10 @@
 .Box{
    display: flex;
    justify-content: flex-end;
+   align-items: center;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:600px) {
    .headerWrap,.simpleWrap{
       width: 100%;
    }

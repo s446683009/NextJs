@@ -58,18 +58,23 @@ const themeObj={[THEME_TEMPLATE_KEY.INDIGO]: {
       palette: {
         primary: {
           scr:'rgb(0, 171, 85)',
-          main: '#333',//按钮等颜色
+          main: 'rgb(0, 171, 85)',//按钮等颜色
           text:'#fff',// 添加用于按钮文字颜色
           hover:'rgb(0, 171, 85,0.08)',
+          background:'rgb(200, 250, 205)',
+          
         },
-        secondary: pink,
+        secondary: {
+          main:red[600]
+        },
         
         background:{
           default:'#fff',
           side:'#fff'
         },
         text:{
-          primary:'rgb(99, 115, 129)',//文本颜色'#212b36'
+          main:'#333',
+          primary:'#333',//文本颜色'#212b36'
           logo:'#fff'
         },
         icon:{

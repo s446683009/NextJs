@@ -16,7 +16,7 @@ function Side({translate:t,model="full",setModel}) {
 
    const variant=matches?'temporary':'permanent';//
    const sideIconClass=isSimple?styled.sideExpend:styled.sideZoom;
-   const mobileOpen=matches?!simple:true;
+   const mobileOpen=matches?!isSimple:true;
 
    const handSimpleHover=(flag)=>{
        if(isSimple){
@@ -28,6 +28,16 @@ function Side({translate:t,model="full",setModel}) {
         setModel(model);
         setSimple(model=='simple');
    }
+//    React.useEffect(() => {
+//     if(matches){
+//         setModel('simple');
+//         setSimple(false);
+
+//     }else{
+//         setSimple(true);
+//     }
+//    }, [matches,setSimple,setModel])
+   
    //temporary
 
     return (

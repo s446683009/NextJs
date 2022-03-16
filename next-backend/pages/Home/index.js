@@ -2,11 +2,11 @@ import React,{useState} from 'react'
 import {Box} from '@mui/material'
 import PropTypes from 'prop-types'
 import Side from '../../components/Side'
-import Main from '../../components/Main'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import useTitle  from '../../utils/hooks/useTitle'
 import { useTranslation } from 'next-i18next';
-import Header from '../../components/Header'
+import Header from '../../components/Header';
+import Main from '../../components/Main';
 
 function Home({children}) {
     useTitle("MUI");
@@ -21,9 +21,9 @@ function Home({children}) {
     
           <Side model={model} setModel={setModel}></Side>
         
-          <main className='main'>
-            HHHHHHHH
-          </main>
+          <Main className='main'>
+
+          </Main>
         </Box>
 
       </>

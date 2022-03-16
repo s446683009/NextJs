@@ -8,13 +8,13 @@ import styled from '../index.module.css'
 
 function UserMenu({t}) {
 const parentRef=React.useRef(null);
-const iconComponent=  <Avatar src='https://avatars.githubusercontent.com/u/37138998?s=40&v=4'/>;
+const iconComponent=  <Avatar className={styled.userAvatar} src='https://avatars.githubusercontent.com/u/37138998?s=40&v=4'/>;
 const textSx={
   my:0
 };
   return (
     
-    <ExpendMenu id="user" sx={{p:0}} text={iconComponent} closeRef={parentRef}>
+    <ExpendMenu id="user"  text={iconComponent} closeRef={parentRef}>
       <div className={styled.useWrap}>
       <div className={styled.titleWrap}>
         <div>

@@ -39,6 +39,11 @@
     color: #bdbdbd;
     font-size: 12px;
 }
+.userAvatar{
+    
+    width: 30px;
+    height: 30px;
+}
 
 .between{
     display: flex;
