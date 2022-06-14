@@ -50,3 +50,30 @@
     margin: 0px auto;
     /* margin: 16px 0px 16px 16px; */
 }
+
+
+/*new*/
+
+.loginBac{
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.loginWrap{
+    display: flex;
+    justify-content: space-around;
+    width: 850px;
+    background-color: #ffffffcf;
+    border-radius: 5px;
+    min-height: 200px;
+}
+.loginLeft{
+    width: 50%;
+    height: 540px;
+}

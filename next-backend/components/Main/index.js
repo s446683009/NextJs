@@ -18,6 +18,18 @@ function Main({sx,t,model,children,className}) {
                     <SilckCard></SilckCard>
                 </Grid>
             </Grid>
+            <Grid container spacing={3}>
+                <Grid item lg={4} md={6} sm={12}>
+                  
+                </Grid>
+                <Grid item lg={4} md={6} sm={12}>
+                    
+                </Grid>
+                <Grid item lg={4} md={6} sm={12}>
+                    
+                </Grid>
+            </Grid>
+
             </div>  
 
        </main>

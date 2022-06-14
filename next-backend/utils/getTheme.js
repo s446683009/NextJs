@@ -57,8 +57,8 @@ const themeObj={[THEME_TEMPLATE_KEY.INDIGO]: {
     
       palette: {
         primary: {
-          scr:'rgb(0, 171, 85)',
-          main: 'rgb(0, 171, 85)',//按钮等颜色
+          scr:'#1967d2',//rgb(0, 171, 85)
+          main: '#1967d2',//按钮等颜色
           text:'#fff',// 添加用于按钮文字颜色
           hover:'rgb(0, 171, 85,0.08)',
           background:'rgb(200, 250, 205)',
@@ -127,6 +127,14 @@ const themeObj={[THEME_TEMPLATE_KEY.INDIGO]: {
            
           },
         },
+        MuiInputLabel:{
+          styleOverrides:{
+            root:{
+              fontSize:'13px'
+            }
+          }
+
+        },
         MuiTextField:{
          
       
@@ -141,9 +149,10 @@ const themeObj={[THEME_TEMPLATE_KEY.INDIGO]: {
         MuiOutlinedInput:{
           styleOverrides:{
             input:{
-              padding:'14px',
+              padding:'13px',
               fontFamily: '"OPPOSans","Microsoft YaHei","sans-serif"',
             },
+           
             notchedOutline:{
               
               //borderColor:'#212b36'

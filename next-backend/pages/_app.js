@@ -22,6 +22,7 @@ const MyApp = ({ Component, pageProps }) => {
 
       <ThemeProvider theme={theme}>
         <StyledEngineProvider injectFirst>
+
           <Component {...pageProps} />
         </StyledEngineProvider>
 

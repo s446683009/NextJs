@@ -5,6 +5,6 @@ module.exports = {
   i18n,
   assetPrefix: BASE_URL,
   basePath: BASE_URL, //node,
- 
+  
 }
 
