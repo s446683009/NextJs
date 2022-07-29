@@ -12,12 +12,15 @@ function Login({backArr=bacArr}) {
   const randomRef=useRef(Math.floor(Math.random()*length));
 
   return (
-    <Box className={styled.loginBac} style={{backgroundImage:`url(${backArr[randomRef.current]})`}}>
+    <Box className={styled.loginBac} >
       <Box className={styled.loginWrap}>
-        <Box className={styled.loginLeft}></Box>
-        <LoginForm>
-          
-        </LoginForm>
+      
+        <Box className={styled.loginArea}>
+             <LoginForm />
+        </Box>
+     
+      
+        {/* <Box className={styled.loginLeft}></Box> */}
       </Box>
       
     </Box>

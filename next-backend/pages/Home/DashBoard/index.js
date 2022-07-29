@@ -1,17 +1,18 @@
 import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
-import Home from '../index'
+
 import Metro from '../../../utils/oidc/SecurityService'
+import Home from '../_layout'
 function DashBoard(props) {
 
-    useEffect(()=>{
-        Metro.signIn();
+    // useEffect(()=>{
+    //     Metro.signIn();
         
-    },[])
+    // },[])
     return (
-       <div>
-           你好
-       </div>
+       <Home>
+           快乐你我存在 
+       </Home>
            
      
     )

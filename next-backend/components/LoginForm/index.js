@@ -2,7 +2,8 @@ import React, { useCallback, useState} from 'react'
 import PropTypes from 'prop-types'
 import styled from './LoginForm.module.css'
 import {Box,TextField,FormControl,InputLabel,OutlinedInput,InputAdornment,
-  IconButton,Grid,Checkbox,FormControlLabel,Link,Button} from '@mui/material'
+  IconButton,Grid,Checkbox,FormControlLabel,Link,Button, Typography} from '@mui/material'
+import { style } from '@mui/system';
 
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
@@ -38,7 +39,7 @@ function LoginForm({size='normal'.loginFun}) {
   return (
     <div className={styled.loginForm}>
       <div className={styled.loginForm_title}>
-        Sign In
+        用户登录
       </div>
       <div className={styled.loginForm_content}>
             <Box>
@@ -109,12 +110,29 @@ function LoginForm({size='normal'.loginFun}) {
               type="submit"
               fullWidth
               variant="contained"
-              sx={{ mt: 3, mb: 2,fontSize:'1rem'}}
-              size={size}
+              sx={{ mt: 3, mb: 2,fontSize:'1.1rem',color:'primary.text'}}
+              size="large"
               onClick={login}
             >
               登录
             </Button>
+
+            <Box className={styled.loginMoreTip}>
+              <Typography className={styled.loginMoreText}>其他登录方式</Typography>
+            </Box>
+            <Grid container spacing={1}  justifyContent="center" alignItems="center"
+>
+              <Grid item xs={3} className={styled.loginItem}>
+                <IconButton sx={{color:'#008000ab'}}><i className='iconfont icon-weixin'></i></IconButton>  
+              </Grid>
+              <Grid item  xs={3} className={styled.loginItem}>
+                <IconButton sx={{color:'#409effdb'}}><i className='iconfont icon-QQ'></i></IconButton>  
+              </Grid>
+              <Grid item  xs={3} className={styled.loginItem}>
+                <IconButton sx={{color:'#e56812c4'}}><i className='iconfont icon-weibo1'></i></IconButton>  
+              </Grid>
+            </Grid>
+
       </div>
 
     </div>
