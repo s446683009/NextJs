@@ -6,7 +6,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import useTitle  from '../../utils/hooks/useTitle'
 import { useTranslation } from 'next-i18next';
 import Header from '../../components/Header';
-import Main from '../../components/Main';
+
 
 function Home({children}) {
     useTitle("MUI");
@@ -21,9 +21,7 @@ function Home({children}) {
     
           <Side model={model} setModel={setModel}></Side>
         
-          <Main className='main'>
-                {children}
-          </Main>
+          <Box className="main">{children}</Box> 
         </Box>
 
       </>
@@ -37,7 +35,6 @@ Home.propTypes = {
 export default Home;
 
 export const getStaticProps = async ({ locale }) => {
-
     const langs = await serverSideTranslations(locale, ['login', 'common']);
     //const data = await getMenu(locale);
     return (

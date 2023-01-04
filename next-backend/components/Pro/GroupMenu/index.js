@@ -6,11 +6,11 @@ import {Page,List,ListItem,ListItemText, Typography, ListItemAvatar,Avatar} from
 import styled from '../index.module.css'
 
 function GroupMenu({t}) {
-const parentRef=React.useRef(null);
+
 const iconComponent= <i className='iconfont icon-qunzu'></i>;
   return (
     
-    <ExpendMenu id="group" text={iconComponent} closeRef={parentRef}>
+    <ExpendMenu id="group" text={iconComponent} >
       <div className={styled.notificationWrap}>
       <div className={styled.titleWrap}>
         <Typography className={styled.title} variant='h2' sx={{py:0.8,pl:1}}>{t("contacts")}（20）</Typography>

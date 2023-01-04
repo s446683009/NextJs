@@ -8,3 +8,5 @@ export const bacArr=[
     '/backend/images/login/bac4.jpg',
     '/backend/images/login/bac5.jpg'
 ]
+
+export const urlPrefix='/backend'

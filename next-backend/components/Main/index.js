@@ -31,7 +31,7 @@ function Main({sx,t,model,children,className}) {
             </Grid>
 
             </div>  
-
+          
        </main>
       
     )

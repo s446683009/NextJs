@@ -8,15 +8,15 @@ import styled from '../index.module.css'
 const languages=getLanuages();
 function LanguageMenu({lng='zh'}) {
  const [language,setLanguage]=React.useState(lng);
- const parentRef=React.useRef(null);
+
  const langObj=getLanguage(language);
  const switchLanguage=(lng)=>{
    setLanguage(lng);
-   parentRef.current();
+
   }
  const iconComponent= <Image  src={langObj?.icon} width={25} height={25} alt='language'/>;
   return (
-    <ExpendMenu id="languge" text={iconComponent} closeRef={parentRef}>
+    <ExpendMenu id="languge" text={iconComponent} >
         <MenuList>
           {
             languages.map(t=>(

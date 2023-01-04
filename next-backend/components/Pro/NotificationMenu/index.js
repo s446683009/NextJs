@@ -7,8 +7,7 @@ import Image from 'next/image'
 import styled from '../index.module.css'
 
 function NotificationMenu({ t }) {
-  
-  const parentRef = React.useRef(null);
+
   const iconComponent = (
     <Badge badgeContent={2} color="secondary">
       <i className='iconfont icon-tongzhi1'></i>
@@ -17,7 +16,7 @@ function NotificationMenu({ t }) {
   const secondClass={className:`textClip ${styled.secondText}`};
   return (
 
-    <ExpendMenu id="notification" text={iconComponent} closeRef={parentRef}>
+    <ExpendMenu id="notification" text={iconComponent}>
       <div className={styled.notificationWrap}>
         <Box className={styled.titleWrap}>
           <div>

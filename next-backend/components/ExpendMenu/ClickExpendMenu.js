@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import Popover from '@mui/material/Popover';
 import {Button,IconButton} from '@mui/material';
 import styled from './index.module.css'
+import ClickAwayListener from '@mui/base/ClickAwayListener';
 
-
-function ClickExpendMenu({children,sx={},className,text,type='text',closeRef,id}) {
+function ClickExpendMenu({children,sx={},className,text,type='text',id}) {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleClick = (event) => {
@@ -17,7 +17,7 @@ function ClickExpendMenu({children,sx={},className,text,type='text',closeRef,id}
 
     setAnchorEl(null);
   };
-  closeRef.current=handleClose;
+  //closeRef.current=handleClose;
   //ref.current=handleClose;
 
   const open = Boolean(anchorEl);
@@ -25,14 +25,16 @@ function ClickExpendMenu({children,sx={},className,text,type='text',closeRef,id}
   const hoverSx=open?{bgcolor:'primary.hover',color:'primary.scr'}:{};
   const ApplyNode=type=='icon'?Button:IconButton;
   return (
+    <ClickAwayListener onClickAway={handleClose}>
     <div>
-      {
+      
       <ApplyNode sx={{...hoverSx,...sx}} className={className} aria-describedby={lid}  onClick={handleClick}>
         {text}
       </ApplyNode>
        
-      }
-      <Popover
+      
+      
+        <Popover
         id={lid}
         open={open}
         anchorEl={anchorEl}
@@ -59,7 +61,10 @@ function ClickExpendMenu({children,sx={},className,text,type='text',closeRef,id}
          
 
       </Popover>
+      
+    
     </div>
+    </ClickAwayListener>
   );
 }
 

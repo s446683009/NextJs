@@ -10,8 +10,10 @@ import Head from 'next/head';
 
 const theme = getTheme();
 
-const MyApp = ({ Component, pageProps }) => {
+const MyApp = ({ Component, pageProps: { session, ...pageProps } }) => {
+  const getLayout = Component.getLayout || ((page) => page)
 
+  
 
 
   return (
@@ -19,14 +21,16 @@ const MyApp = ({ Component, pageProps }) => {
       <Head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
-
+   
       <ThemeProvider theme={theme}>
         <StyledEngineProvider injectFirst>
-
-          <Component {...pageProps} />
+        
+          {getLayout(<Component {...pageProps} />)}
+        
         </StyledEngineProvider>
 
       </ThemeProvider>
+     
     </React.Fragment>
 
   )
