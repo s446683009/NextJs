@@ -15,7 +15,6 @@ function DashBoard(props) {
     return (
         <Box>
             <Main>
-
             </Main>
         </Box>
         
